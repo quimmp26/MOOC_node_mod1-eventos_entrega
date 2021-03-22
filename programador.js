@@ -7,7 +7,12 @@ class Programador extends EventEmitter {
     super();
   }
 
-
+  programarTermostato(program) {
+    const later = require("later");
+    later.date.localTime();
+    const sched = later.parse.text("at "+program.hora);
+    later.setInterval(() => this.emit(program.temperatura), sched);
+  }
 
 
 }
