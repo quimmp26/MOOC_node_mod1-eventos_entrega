@@ -10,7 +10,7 @@ var programaciones = [
     { hora: "08:30",
       temperatura: 18
     },
-    { hora: "19:14",
+    { hora: "19:36",
       temperatura: 22
     },
     { hora: "23:00",
@@ -42,7 +42,6 @@ termostato.indicarTemperaturaIdeal(20);
 termostato.encender();
 
 //Creamos un programador
-const programador = new Programador();
-for(var i=0;i<programaciones.length;i++){
-    programador.programarTermostato(programaciones[i]);
-}
+const programador = new Programador(programaciones);
+programador.programarTermostato();
+
