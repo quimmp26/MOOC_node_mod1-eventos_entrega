@@ -7,6 +7,9 @@ class Programador extends EventEmitter {
     super();
   }
 
+
+
+
 }
 
 exports = module.exports = Programador;

@@ -2,6 +2,22 @@ const Habitacion = require('./habitacion');
 const Climatizador = require('./climatizador');
 const Termostato = require('./termostato');
 
+
+var programaciones = [
+    { hora: "07:00",
+      temperatura: 22
+    },
+    { hora: "08:30",
+      temperatura: 18
+    },
+    { hora: "17:01",
+      temperatura: 22
+    },
+    { hora: "23:00",
+      temperatura: 20
+    }
+];
+
 // Creamos una habitacion:
 const dormitorio = new Habitacion();
 dormitorio.temperatura = 22;
@@ -24,3 +40,7 @@ termostato.indicarTemperaturaIdeal(20);
 
 // Encender el termostato:
 termostato.encender();
+
+//Creamos un programador
+const programador = new Programador();
+programador.programarTermostato();
