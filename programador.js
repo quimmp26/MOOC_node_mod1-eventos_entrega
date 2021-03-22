@@ -14,6 +14,7 @@ class Programador extends EventEmitter {
     later.setInterval(() => this.emit(program.temperatura), sched);
   }
 
+  
 
 }
 

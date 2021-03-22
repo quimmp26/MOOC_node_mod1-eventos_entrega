@@ -1,7 +1,7 @@
 const Habitacion = require('./habitacion');
 const Climatizador = require('./climatizador');
 const Termostato = require('./termostato');
-
+const Programador = require('./programador')
 
 var programaciones = [
     { hora: "07:00",
@@ -10,7 +10,7 @@ var programaciones = [
     { hora: "08:30",
       temperatura: 18
     },
-    { hora: "17:01",
+    { hora: "19:14",
       temperatura: 22
     },
     { hora: "23:00",
@@ -43,4 +43,6 @@ termostato.encender();
 
 //Creamos un programador
 const programador = new Programador();
-programador.programarTermostato();
+for(var i=0;i<programaciones.length;i++){
+    programador.programarTermostato(programaciones[i]);
+}
