@@ -1,5 +1,4 @@
-const EventEmitter = require("events");
-
+const EventEmitter = require("./events");
 
 var programaciones = [];
 // Clase programador.
@@ -18,10 +17,7 @@ class Programador extends EventEmitter {
       const sched = later.parse.text("at "+programaciones[i].hora);
       later.setInterval(() => this.emit(console.log(`Programando... ${programaciones[i].temperatura}ºC`)), sched);
     }
-
   }
-
-  
 
 }
 
